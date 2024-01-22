@@ -1,12 +1,12 @@
-// backend-nestjs/src/app.module.ts
-
 import { Module } from '@nestjs/common';
 import { GoogleSearchModule } from './google-search/google-search.module';
 import { MongooseModule } from '@nestjs/mongoose';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://google-search-mongodb/googlesearch'),
+    ConfigModule.forRoot(),
+    MongooseModule.forRoot(process.env.MONGODB_URI),
     GoogleSearchModule,
   ],
 })

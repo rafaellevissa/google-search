@@ -18,6 +18,8 @@ To start the application, follow these steps:
 docker-compose up -d
 ```
 
+2. Create a `.env` file in the project's root directory with the necessary variables. An example can be found in the `.env.example` file.
+
 This will start the application, and you can access it through the browser at [http://localhost:3000](http://localhost:3000).
 
 ## Additional Notes
